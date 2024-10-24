@@ -1,38 +1,148 @@
+#tsparticles {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .App {
-  text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icons-a {
+    color: yellow;
+    font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.gradient-text {
+    background: linear-gradient(90deg, yellow, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.tech-icon {
+    text-align: center;
+    background: rgba(255, 255, 0, 0.817);
+    color: black;
+    font-size: 3.5rem;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.tech-icon:hover {
+    transform: scale(1.05) !important;
+    overflow: hidden !important;
+    border: 2.2px solid white !important;
   }
+
+.link-button {
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+#tsparticles {
+    position: fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* src/VerticalTimeline.css */
+
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    padding: 0;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: yellow;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .timeline-item {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    background: black;
+    color: yellow;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    z-index: 2;
+  }
+  
+  .timeline-item.left {
+    float: left;
+    clear: right;
+    transform: translateX(-30px); /* Slightly move to the left for spacing */
+  }
+  
+  .timeline-item.right {
+    float: right;
+    clear: left;
+    transform: translateX(30px); /* Slightly move to the right for spacing */
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    background: yellow;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .timeline-item.left::before {
+    right: -20px;
+  }
+  
+  .timeline-item.right::before {
+    left: -20px;
+  }
+  
+  .timeline-content {
+    position: relative;
+  }
+  
+  .project-date {
+    font-size: 0.8em;
+    color: yellow;
+    text-align: right;
+    display: block;
+  }
+  
+
+.github-button {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 8px 12px;
+  margin-top: 10px;
+  background-color: #fff44f;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.github-button:hover {
+  background-color: #ffd700;
+  color: black;
 }
