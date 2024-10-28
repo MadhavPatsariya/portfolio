@@ -28,10 +28,10 @@ function Resume() {
       </Row>
       <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
-            variant="warning"
+            
             href={'/Madhav Resume.pdf'}
             target="_blank"
-            style={{ maxWidth: "250px", marginTop: '3rem', backgroundColor: '#fff44f'}}
+            style={{ maxWidth: "250px", marginTop: '3rem', backgroundColor: 'linear-gradient(0deg, #74b9ff, #81ecec)'}}
           >
             <AiOutlineDownload />
             &nbsp;Download CV

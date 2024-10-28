@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./assets/abstract-black.jpg");
+  background-image: url("./assets/gray-background.jpg");
+   /* background: 'linear-gradient(90deg, #ff9a9e, #fbc2eb)'; */
   background-size: cover; /* Ensures the image covers the entire element */
   background-position: center; /* Centers the image */
   max-width: 100%;

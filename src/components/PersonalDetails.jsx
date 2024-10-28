@@ -1,18 +1,19 @@
-import React from 'react'
-import Techstack from './TechStack'
-import ToolStack from './ToolStack'
+import React from 'react';
+import Techstack from './TechStack';
+import ToolStack from './ToolStack';
 import { GiThreePointedShuriken } from "react-icons/gi";
+
 export default function PersonalDetails() {
     return (
         <div>
             <div className='container'>
-                <div className='row' style={{ marginTop: '20vh' }}>
-                    <div className="col-6" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingBottom: '4rem' }}>
+                <div className='row' style={{ marginTop: '20vh', flexWrap: 'wrap', alignItems: 'center' }}>
+                    <div className="col-lg-6 col-md-12" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingBottom: '4rem' }}>
                         <div className='row'>
-                            <div style={{ color: 'white', fontSize: 'xxx-large', fontWeight: 'bold' }}>
-                                <span style={{ color: 'white' }}>Personal </span>
+                            <div style={{ color: 'black', fontSize: 'calc(1.2rem + 2vh)', fontWeight: 'bold' }}>
+                                <span style={{ color: 'black' }}>Personal </span>
                                 <span style={{
-                                    background: 'linear-gradient(90deg, white, yellow)',
+                                    background: 'linear-gradient(90deg, #74b9ff, #81ecec)',
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent',
                                     backgroundClip: 'text',
@@ -22,50 +23,46 @@ export default function PersonalDetails() {
                                 </span>
                             </div>
                         </div>
-                        <div className='row' style={{ color: 'black', fontSize: 'large', fontWeight: 'bold', textAlign: 'start' }}>
-                            <div style={{ color: '#fff44f' }}>
-                                Hi, I am <span style={{ color: 'white' }}>Madhav</span>. I am a
-                                <span style={{ color: 'white' }}> Software Developer</span> by profession and an
-                                <span style={{ color: 'white' }}> Electronics Engineer</span> by degree.
+                        <div className='row' style={{ color: '#636e72', fontSize: 'calc(0.6em + 0.5vw)', textAlign: 'start', marginTop: '2rem' }}>
+                            <div>
+                                Hi, I am Madhav. I am a software developer by profession but an electronics engineer by degree.
                             </div>
-                            <div style={{ color: '#fff44f' }}>
-                                I am based in <span style={{ color: 'white' }}>Hyderabad, India</span> but my hometown is in
-                                <span style={{ color: 'white' }}> Madhya Pradesh</span>.
+                            <div>
+                                I am based in Hyderabad, India but I am a native from the state of Madhya Pradesh.
                             </div>
-                            <div style={{ color: '#fff44f', marginTop: '1rem' }}>
+                            <div style={{ marginTop: '1rem' }}>
                                 When I am not coding, I do:
                             </div>
-                            <div style={{ color: '#fff44f' }}>
-                                <ul style={{ listStyle: 'none' }}>
+                            <div>
+                                <ul style={{ listStyle: 'none', padding: 0 }}>
                                     <li className="about-activity">
-                                        <GiThreePointedShuriken /> <span style={{ color: 'white' }}>Cafe Hopping</span>
+                                        <GiThreePointedShuriken /> <span style={{ color: '#636e72' }}>Cafe Hopping</span>
                                     </li>
                                     <li className="about-activity">
-                                        <GiThreePointedShuriken /> <span style={{ color: '#fff44f' }}>Cooking</span>
+                                        <GiThreePointedShuriken /> <span style={{ color: '#636e72' }}>Cooking</span>
                                     </li>
                                     <li className="about-activity">
-                                        <GiThreePointedShuriken /> <span style={{ color: 'white' }}>Reading Books</span>
+                                        <GiThreePointedShuriken /> <span style={{ color: '#636e72' }}>Reading Books</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div className='col-2'></div>
-                    <div className="col-4" style={{ justifyContent: 'center', display: 'flex' }}>
+                    <div className='col-lg-6 col-md-12' style={{ justifyContent: 'center', display: 'flex' }}>
                         <img
                             src={require('../assets/desk-bg.png')}
                             alt="bitmoji"
-                            style={{ width: '120%', height: 'auto', marginTop: '2rem' }}
+                            style={{ maxWidth: '100%', height: 'auto', marginTop: '2rem' }}
                         />
                     </div>
                 </div>
             </div>
             <div className='container'>
                 <div className='row'>
-                    <div style={{ fontSize: 'xxx-large', color: 'black', textAlign: 'center', fontWeight: 'bold', marginTop: '5rem' }}>
+                    <div style={{ fontSize: 'calc(1.2rem + 2vh)', color: 'black', textAlign: 'center', fontWeight: 'bold', marginTop: '5rem' }}>
                         <span style={{ color: 'black' }}>Professional </span>
                         <span style={{
-                            background: 'linear-gradient(90deg, white, yellow)',
+                            background: 'linear-gradient(90deg, #74b9ff, #81ecec)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text',
@@ -73,7 +70,7 @@ export default function PersonalDetails() {
                         }}>
                             Skill
                         </span>
-                        <span style={{ color: 'yellow' }}>set</span>
+                        <span style={{ color: '#74b9ff' }}>set</span>
                     </div>
                 </div>
                 <div className='row'>
@@ -84,10 +81,10 @@ export default function PersonalDetails() {
             </div>
             <div className='container' style={{ marginBottom: '5rem' }}>
                 <div className='row'>
-                    <div style={{ fontSize: 'xxx-large', color: 'black', textAlign: 'center', fontWeight: 'bold', marginTop: '5rem' }}>
+                    <div style={{ fontSize: 'calc(1.2rem + 2vh)', color: 'black', textAlign: 'center', fontWeight: 'bold', marginTop: '5rem' }}>
                         <span style={{ color: 'black' }}>Professional </span>
                         <span style={{
-                            background: 'linear-gradient(90deg, white, yellow)',
+                            background: 'linear-gradient(90deg, #74b9ff, #81ecec)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text',
@@ -95,7 +92,7 @@ export default function PersonalDetails() {
                         }}>
                             Tool
                         </span>
-                        <span style={{ color: 'yellow' }}>set</span>
+                        <span style={{ color: '#74b9ff' }}>set</span>
                     </div>
                 </div>
                 <div className='row'>
@@ -105,5 +102,5 @@ export default function PersonalDetails() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

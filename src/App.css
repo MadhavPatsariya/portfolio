@@ -1,141 +1,139 @@
+/* Background and z-index for particles */
 #tsparticles {
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
+/* Main app styles */
 .App {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
+/* Footer icon styles */
 .icons-a {
-    color: yellow;
-    font-size: 2rem;
+  color: #1e90ff; /* Change icon color to match the scheme */
+  font-size: 2rem;
 }
 
+/* Gradient text style */
 .gradient-text {
-    background: linear-gradient(90deg, yellow, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+  background: linear-gradient(90deg, #74b9ff, #81ecec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
+/* Tech icon styles */
 .tech-icon {
-    text-align: center;
-    background: rgba(255, 255, 0, 0.817);
-    color: black;
-    font-size: 3.5rem;
-    border: 1px solid whitesmoke;
-    border-radius: 10px;
+  text-align: center;
+  /* background: rgba(255, 255, 255, 0.1); Adjusted to match the grayish theme */
+  background:#e0e3e4;
+  color: #1e90ff;
+  font-size: 3.5rem;
+  border: 1px solid #dfe4ea; /* Light gray border */
+  border-radius: 10px;
 }
 
 .tech-icon:hover {
-    transform: scale(1.05) !important;
-    overflow: hidden !important;
-    border: 2.2px solid white !important;
-  }
-
-.link-button {
-    margin: 0;
-    text-decoration: none;
-    color: inherit;
+  transform: scale(1.05) !important;
+  overflow: hidden !important;
+  border: 2.2px solid #1e90ff !important; /* Light blue hover border */
 }
 
-#tsparticles {
-    position: fixed !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    width: 100%;
-    height: 100%;
-  }
+/* Link button styles */
+.link-button {
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+}
 
-  /* src/VerticalTimeline.css */
-
+/* Timeline styles */
 .timeline {
-    position: relative;
-    width: 80%;
-    margin: 50px auto;
-    padding: 0;
-  }
-  
-  .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-    background: yellow;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-  
-  .timeline-item {
-    position: relative;
-    width: 45%;
-    padding: 20px;
-    background: black;
-    color: yellow;
-    border-radius: 8px;
-    margin-bottom: 50px;
-    z-index: 2;
-  }
-  
-  .timeline-item.left {
-    float: left;
-    clear: right;
-    transform: translateX(-30px); /* Slightly move to the left for spacing */
-  }
-  
-  .timeline-item.right {
-    float: right;
-    clear: left;
-    transform: translateX(30px); /* Slightly move to the right for spacing */
-  }
-  
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    width: 10px;
-    height: 10px;
-    background: yellow;
-    border-radius: 50%;
-    z-index: 2;
-  }
-  
-  .timeline-item.left::before {
-    right: -20px;
-  }
-  
-  .timeline-item.right::before {
-    left: -20px;
-  }
-  
-  .timeline-content {
-    position: relative;
-  }
-  
-  .project-date {
-    font-size: 0.8em;
-    color: yellow;
-    text-align: right;
-    display: block;
-  }
-  
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 0;
+}
 
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  /* background: #1e90ff; Changed to match the color scheme */
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2); /* Slightly transparent white background */
+  color: #2d3436; /* Dark gray text */
+  border-radius: 8px;
+  margin-bottom: 50px;
+  z-index: 2;
+}
+
+.timeline-item.left {
+  float: left;
+  clear: right;
+  transform: translateX(-30px); /* Slightly move to the left for spacing */
+}
+
+.timeline-item.right {
+  float: right;
+  clear: left;
+  transform: translateX(30px); /* Slightly move to the right for spacing */
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  background: #1e90ff; /* Changed to match the color scheme */
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-item.left::before {
+  right: -20px;
+}
+
+.timeline-item.right::before {
+  left: -20px;
+}
+
+.timeline-content {
+  position: relative;
+}
+
+.project-date {
+  font-size: 0.8em;
+  color: #1e90ff; /* Changed to match the color scheme */
+  text-align: right;
+  display: block;
+}
+
+/* GitHub button styles */
 .github-button {
   display: inline-flex;
   align-items: center;
   padding: 8px 12px;
   margin-top: 10px;
-  background-color: #fff44f;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  color: #2d3436; /* Dark gray text */
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -143,6 +141,40 @@
 }
 
 .github-button:hover {
-  background-color: #ffd700;
-  color: black;
+  background-color: rgba(255, 215, 0, 0.5); /* Light gold background on hover */
+  color: #2d3436; /* Keep the text color */
+}
+
+.about-activity {
+  margin-bottom: 0.5rem; /* Adds spacing between activities */
+}
+
+.container {
+  padding: 0 15px; /* Prevents overflow */
+}
+
+@media (max-width: 768px) {
+  h1, h4 {
+      font-size: 1.8rem; /* Adjust heading size for mobile */
+  }
+
+  p {
+      font-size: 1rem; /* Adjust paragraph size for mobile */
+  }
+
+  .timeline-item {
+    width: 90%; /* Allow more width on smaller screens */
+  }
+}
+.vertical-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+
+.timeline-item {
+  width: 100%; /* Ensure items take the full width of the parent */
+  max-width: 600px; /* Prevent them from stretching too wide on large screens */
+  padding: 1rem; /* Add some padding for better spacing */
+  margin: 1rem 0; /* Add vertical spacing between items */
 }
