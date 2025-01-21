@@ -9,7 +9,7 @@ export default function Navbar() {
         zIndex: '1000',
         color: '#f5f5f5',
     };
-    
+
     const darkStyle = {
         backgroundColor: '#dfe4ea',
         position: 'sticky',
@@ -20,6 +20,7 @@ export default function Navbar() {
 
     const [navbarStyle, setNavStyle] = useState(darkStyle);
     const [hoveredButton, setHoveredButton] = useState(0);
+    // const [logoUrl, setLogoUrl] = useState('../assets/name.png');
 
     const normalStyle = {
         margin: '0',
@@ -41,15 +42,17 @@ export default function Navbar() {
     function onScroll() {
         if (window.scrollY > 30) {
             setNavStyle(lightStyle);
+            //setLogoUrl('../assets/white-name.png');
         } else {
             setNavStyle(darkStyle);
+            //setLogoUrl('../assets/name.png');
         }
     }
 
     const addStyle = (key) => {
         setHoveredButton(key);
     };
-    
+
     const removeStyle = () => {
         setHoveredButton(0);
     };
@@ -67,26 +70,62 @@ export default function Navbar() {
                 <Link className="navbar-brand" to="/" style={{ marginLeft: '2rem', paddingTop: '1rem', paddingRight: '2rem', fontWeight: 'bold', color: '#1e90ff' }}>
                     <span className="dot" style={{ height: '3rem', width: '3rem', backgroundColor: '#2f3640', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#f5f5f5' }}>mP.</span>
                 </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav" style={{ justifyContent: 'flex-end', marginRight: '5rem' }}>
-                    <ul className="navbar-nav" style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        gap: '1rem',
-                    }}>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link style={hoveredButton === 1 ? hoverStyle : normalStyle} to='/' onMouseEnter={() => addStyle(1)} onMouseLeave={removeStyle}>Home</Link>
+                            <Link
+                                className="nav-link"
+                                style={hoveredButton === 1 ? hoverStyle : normalStyle}
+                                to="/"
+                                onMouseEnter={() => addStyle(1)}
+                                onMouseLeave={removeStyle}
+                            >
+                                Home
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <Link style={hoveredButton === 2 ? hoverStyle : normalStyle} to='/about' onMouseEnter={() => addStyle(2)} onMouseLeave={removeStyle}>About</Link>
+                            <Link
+                                className="nav-link"
+                                style={hoveredButton === 2 ? hoverStyle : normalStyle}
+                                to="/about"
+                                onMouseEnter={() => addStyle(2)}
+                                onMouseLeave={removeStyle}
+                            >
+                                About
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <Link style={hoveredButton === 3 ? hoverStyle : normalStyle} to='/project' onMouseEnter={() => addStyle(3)} onMouseLeave={removeStyle}>Projects</Link>
+                            <Link
+                                className="nav-link"
+                                style={hoveredButton === 3 ? hoverStyle : normalStyle}
+                                to="/project"
+                                onMouseEnter={() => addStyle(3)}
+                                onMouseLeave={removeStyle}
+                            >
+                                Projects
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <Link style={hoveredButton === 4 ? hoverStyle : normalStyle} to='/resume' onMouseEnter={() => addStyle(4)} onMouseLeave={removeStyle}>Resume & Insights</Link>
+                            <Link
+                                className="nav-link"
+                                style={hoveredButton === 4 ? hoverStyle : normalStyle}
+                                to="/resume"
+                                onMouseEnter={() => addStyle(4)}
+                                onMouseLeave={removeStyle}
+                            >
+                                Resume & Insights
+                            </Link>
                         </li>
                     </ul>
                 </div>
